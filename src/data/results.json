@@ -1,0 +1,130 @@
+[
+  {
+    "id": "1",
+    "name": "zubowitch",
+    "speaker": "top",
+    "speaches": [
+      {
+        "id": "1",
+        "name": "illidan",
+        "result": "10/10"
+      },
+      {
+        "id": "2",
+        "name": "maev",
+        "result": "5/10"
+      },
+      {
+        "id": "3",
+        "name": "durotan",
+        "result": "7/10"
+      },
+      {
+        "id": "4",
+        "name": "ragnaros",
+        "result": "8/10"
+      },
+      {
+        "id": "5",
+        "name": "zubowitch",
+        "result": "2/10"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "daniluk",
+    "speaker": "topless",
+    "speaches": [
+      {
+        "id": "1",
+        "name": "illidan",
+        "result": "10/10"
+      },
+      {
+        "id": "2",
+        "name": "maev",
+        "result": "5/10"
+      },
+      {
+        "id": "3",
+        "name": "durotan",
+        "result": "7/10"
+      },
+      {
+        "id": "4",
+        "name": "ragnaros",
+        "result": "8/10"
+      },
+      {
+        "id": "5",
+        "name": "zubowitch",
+        "result": "2/10"
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "name": "van gog",
+    "speaker": "medium-top",
+    "speaches": [
+      {
+        "id": "1",
+        "name": "illidan",
+        "result": "10/10"
+      },
+      {
+        "id": "2",
+        "name": "maev",
+        "result": "5/10"
+      },
+      {
+        "id": "3",
+        "name": "durotan",
+        "result": "7/10"
+      },
+      {
+        "id": "4",
+        "name": "ragnaros",
+        "result": "8/10"
+      },
+      {
+        "id": "5",
+        "name": "zubowitch",
+        "result": "2/10"
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "name": "vaterloo",
+    "speaker": "looser",
+    "speaches": [
+      {
+        "id": "1",
+        "name": "illidan",
+        "result": "10/10"
+      },
+      {
+        "id": "2",
+        "name": "maev",
+        "result": "5/10"
+      },
+      {
+        "id": "3",
+        "name": "durotan",
+        "result": "7/10"
+      },
+      {
+        "id": "4",
+        "name": "ragnaros",
+        "result": "8/10"
+      },
+      {
+        "id": "5",
+        "name": "zubowitch",
+        "result": "2/10"
+      }
+    ]
+  }
+]
