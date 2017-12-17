@@ -1,10 +1,14 @@
 # Speakup
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+Applications for increase speaking soft skill by self-training. 
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Download this repo, then `npm i` for install all nodes modules.
+
+## Run
+
+Use `npm start` to launch project.
 
 ## Code scaffolding
 
