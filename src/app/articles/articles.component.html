@@ -1,0 +1,16 @@
+<div class="articles_header">
+    <h1>Articles</h1>
+</div>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let article of articles">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{article.title}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{article.desccription}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>{{article.text}}</p>
+    </mat-expansion-panel>
+</mat-accordion>

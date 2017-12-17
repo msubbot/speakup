@@ -3,68 +3,13 @@
 </mat-toolbar>
 <mat-horizontal-stepper [linear]="isLinear" class="slider">
   <mat-step [stepControl]="firstFormGroup" label="Read Articles">
-    <div class="articles_header">
-      <h1>Articles</h1>
-    </div>
-    <mat-accordion>
-      <mat-expansion-panel *ngFor="let article of articles">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            {{article.title}}
-          </mat-panel-title>
-          <mat-panel-description>
-            {{article.desccription}}
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>{{article.text}}</p>
-      </mat-expansion-panel>
-    </mat-accordion>
+    <sr-articles [articles]="articles"></sr-articles>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup" label="Train your speach">
-    <mat-card>
-      <div>
-        <mat-form-field>
-          <input matInput [(ngModel)]="username" placeholder="Type your name here" required>
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-radio-group class="example-radio-group" [(ngModel)]="selectedSpeachType">
-          <mat-radio-button class="example-radio-button" *ngFor="let speach of speachTypes" [value]="speach">
-            {{speach}}
-          </mat-radio-button>
-          <div class="example-selected-value">You select {{selectedSpeachType}} speach type.</div>
-        </mat-radio-group>
-      </div>
-      <div>
-        <mat-radio-group class="example-radio-group" [(ngModel)]="speachResult">
-          <mat-radio-button class="example-radio-button" *ngFor="let result of speachResults" [value]="result">
-            {{result}}
-          </mat-radio-button>
-          <div class="example-selected-value">You select {{speachResult}} result of your spaech.</div>
-        </mat-radio-group>
-      </div>
-      <button mat-raised-button matStepperNext *ngIf="isValidSpeach()" (click)="addSpeach()">Check Results</button>
-    </mat-card>
+    <sr-speach [username]="username" [selectedSpeachType]="selectedSpeachType" [speachResult]="speachResult" [speachResults]="speachResults"
+      [speachTypes]="speachTypes" [(speaches)]="speaches"></sr-speach>
   </mat-step>
   <mat-step label="Check the results">
-    <div>
-      <div class="articles_header">
-        <h1>Speaches</h1>
-      </div>
-      <mat-accordion>
-        <mat-expansion-panel *ngFor="let speach of speaches">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{speach.username}}
-            </mat-panel-title>
-            <mat-panel-description>
-              <p>{{speach.text}}</p>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Sheach type is {{speach.selectedSpeachType}} and results are {{speach.speachResult}}</p>
-        </mat-expansion-panel>
-      </mat-accordion>
-      <button mat-button matStepperPrevious>Back</button>
-    </div>
+    <sr-speach-results [speaches]="speaches"></sr-speach-results>
   </mat-step>
 </mat-horizontal-stepper>

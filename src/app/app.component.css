@@ -1,15 +1,3 @@
-.example-radio-group {
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.example-radio-button {
-  margin: 5px;
-}
-
-.example-selected-value {
-  margin: 15px 0;
-}
 
 .demo-tab-group {
   border: 1px solid #e8e8e8;

@@ -8,22 +8,11 @@ type Speach = {
 };
 
 @Component({
-  selector: "app-root",
+  selector: "app",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  options = {
-    era: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    weekday: "long",
-    timezone: "UTC",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric"
-  };
   title = "app";
   speachTypes = ["public", "camarades", "official", "relax"];
   speachResults = ["good", "not good", "bad", "bad like your mama"];
@@ -44,26 +33,6 @@ export class AppComponent {
       date: new Date().toLocaleString("en-US", this.options)
     },
   ];
-
-  isValidSpeach() {
-    return (
-      this.username !== undefined &&
-      this.selectedSpeachType !== undefined &&
-      this.speachResult !== undefined
-    );
-  }
-
-  addSpeach() {
-    if (this.isValidSpeach()) {
-      const newSpeach: Speach = {
-        username: this.username,
-        selectedSpeachType: this.selectedSpeachType,
-        speachResult: this.speachResult,
-        date: new Date().toLocaleString("en-US", this.options)
-      };
-      this.speaches.push(newSpeach);
-    }
-  }
 
   articles = [
     {
