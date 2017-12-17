@@ -16,6 +16,17 @@ export class AppComponent {
   title = "app";
   speachTypes = ["public", "camarades", "official", "relax"];
   speachResults = ["good", "not good", "bad", "bad like your mama"];
+  options = {
+    era: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long",
+    timezone: "UTC",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric"
+  };
   selectedSpeachType: string;
   username: string;
   speachResult: string;
