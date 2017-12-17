@@ -12,6 +12,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatRadioModule } from "@angular/material/radio";
+import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { MatRadioModule } from "@angular/material/radio";
     MatGridListModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatExpansionModule
   ],
   exports: [
     MatButtonModule,
@@ -36,7 +38,8 @@ import { MatRadioModule } from "@angular/material/radio";
     MatGridListModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule {}
