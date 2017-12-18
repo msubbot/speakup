@@ -20,5 +20,10 @@
             <div class="example-selected-value">You select {{speachResult}} result of your spaech.</div>
         </mat-radio-group>
     </div>
-    <button mat-raised-button matStepperNext *ngIf="isValidSpeach()" (click)="addSpeach()">Check Results</button>
+    <button mat-raised-button *ngIf="!isRecording" (click)="recordSpeech()">record speech</button>
+    <div *ngIf="isRecording">
+        <img src="../../assets/Spinner.svg">
+        <button mat-raised-button (click)="endRecording()">end recording</button>
+    </div>
+    <button mat-raised-button matStepperNext *ngIf="isValidSpeach()" (click)="addSpeach()">submit speech</button>
 </mat-card>

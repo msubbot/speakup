@@ -2,16 +2,16 @@
 .demo-tab-group {
     border: 1px solid #e8e8e8;
   }
-  
+
   .demo-tab-content {
     padding: 16px;
   }
-  
+
   .example-container {
     display: flex;
     flex-direction: column;
   }
-  
+
   .example-container > * {
     width: 100%;
   }
@@ -24,7 +24,7 @@
     width: 60%;
     font-family: "Roboto";
   }
-  
+
   .header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     margin-top: 20;
@@ -32,11 +32,17 @@
   .articles_header {
       text-align: center
   }
-  
+
   .example-icon {
     padding: 0 14px;
   }
-  
+
   .example-spacer {
     flex: 1 1 auto;
   }
+
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}

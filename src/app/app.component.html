@@ -1,15 +1,15 @@
 <mat-toolbar class="header" color="primary">
-  <span>SpeakUp</span>
+    <span>SpeakUp</span>
 </mat-toolbar>
 <mat-horizontal-stepper [linear]="isLinear" class="slider">
-  <mat-step [stepControl]="firstFormGroup" label="Read Articles">
-    <sr-articles [articles]="articles"></sr-articles>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup" label="Train your speach">
-    <sr-speach [username]="username" [selectedSpeachType]="selectedSpeachType" [speachResult]="speachResult" [speachResults]="speachResults"
-      [speachTypes]="speachTypes" [(speaches)]="speaches"></sr-speach>
-  </mat-step>
-  <mat-step label="Check the results">
-    <sr-speach-results [speaches]="speaches"></sr-speach-results>
-  </mat-step>
+    <mat-step [stepControl]="firstFormGroup" label="Read Articles">
+        <sr-articles [articles]="articles"></sr-articles>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Train your speach">
+        <sr-speach [username]="username" [selectedSpeachType]="selectedSpeachType" [speachResult]="speachResult" [speachResults]="speachResults"
+            [speachTypes]="speachTypes" [(speaches)]="speaches"></sr-speach>
+    </mat-step>
+    <mat-step label="Check the results">
+        <sr-speach-results [speaches]="speaches"></sr-speach-results>
+    </mat-step>
 </mat-horizontal-stepper>
