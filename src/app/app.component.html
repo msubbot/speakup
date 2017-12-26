@@ -1,20 +1,24 @@
-<mat-toolbar class="header" color="primary">
-    <span>SpeakUp</span>
-</mat-toolbar>
-<mat-horizontal-stepper [linear]="isLinear" class="slider">
-    <mat-step [stepControl]="firstFormGroup" label="Read Articles">
-        <sr-articles [articles]="articles"></sr-articles>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Train your speech">
-        <sr-speech  [username]="username"
-                    [selectedSpeechType]="selectedSpeechType"
-                    [speechResult]="speechResult"
-                    [speechResults]="speechResults"
-                    [speechTypes]="speechTypes"
-                    [(speeches)]="speeches">
-        </sr-speech>
-    </mat-step>
-    <mat-step label="Check the results">
-        <sr-speech-results [speeches]="speeches"></sr-speech-results>
-    </mat-step>
-</mat-horizontal-stepper>
+<div class="wrapper">
+    <mat-toolbar class="header" color="primary">
+        <img src="../assets/pics/speech.png" class="header_icon">
+        <h1>
+            SpeakUp
+        </h1>
+    </mat-toolbar>
+    <mat-horizontal-stepper [linear]="isLinear" class="slider">
+        <mat-step [stepControl]="firstFormGroup" label="Read Articles">
+            <sr-articles></sr-articles>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Train your speech">
+            <sr-speech [username]="username" [selectedSpeechType]="selectedSpeechType" [speechResult]="speechResult" [speechResults]="speechResults"
+                [speechTypes]="speechTypes" [(speeches)]="speeches">
+            </sr-speech>
+        </mat-step>
+        <mat-step label="Check the results">
+            <sr-speech-results [speeches]="speeches"></sr-speech-results>
+        </mat-step>
+    </mat-horizontal-stepper>
+    <mat-toolbar class="footer" color="primary">
+        <div class="signa">© Created by SpeakUp Team 2017</div>
+    </mat-toolbar>
+</div>
