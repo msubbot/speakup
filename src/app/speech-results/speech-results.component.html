@@ -3,16 +3,16 @@
         <h1>Speeches</h1>
     </div>
     <mat-accordion>
-        <mat-expansion-panel *ngFor="let speach of speaches">
+        <mat-expansion-panel *ngFor="let speech of speeches">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    {{speach.username}}
+                    {{speech.username}}
                 </mat-panel-title>
                 <mat-panel-description>
-                    <p>{{speach.text}}</p>
+                    <p>{{speech.text}}</p>
                 </mat-panel-description>
             </mat-expansion-panel-header>
-            <p>Sheach type is {{speach.selectedSpeachType}} and results are {{speach.speachResult}}</p>
+            <p>Sheach type is {{speech.selectedSpeechType}} and results are {{speech.speechResult}}</p>
         </mat-expansion-panel>
     </mat-accordion>
     <button mat-button matStepperPrevious>Back</button>

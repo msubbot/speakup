@@ -1,34 +1,34 @@
 import { Component, Input } from "@angular/core";
 
-type Speach = {
+type Speech = {
     username: string;
-    selectedSpeachType: string;
-    speachResult: string;
+    selectedSpeechType: string;
+    speechResult: string;
     date: string;
     record: boolean;
 };
 
 @Component({
-    selector: "sr-speach",
-    templateUrl: "./speach.component.html",
-    styleUrls: ["./speach.component.css"]
+    selector: "sr-speech",
+    templateUrl: "./speech.component.html",
+    styleUrls: ["./speech.component.css"]
 })
-export class SpeachComponent {
+export class SpeechComponent {
     @Input() username: string;
-    @Input() selectedSpeachType: string;
-    @Input() speachResult: string;
-    @Input() speachResults: string[];
-    @Input() speachTypes: string[];
-    @Input() speaches: Speach[];
+    @Input() selectedSpeechType: string;
+    @Input() speechResult: string;
+    @Input() speechResults: string[];
+    @Input() speechTypes: string[];
+    @Input() speeches: Speech[];
 
     isRecording: boolean = false;
     recordExist: boolean = false;
 
-    isValidSpeach() {
+    isValidSpeech() {
         return (
             this.username !== undefined &&
-            this.selectedSpeachType !== undefined &&
-            this.speachResult !== undefined && this.recordExist
+            this.selectedSpeechType !== undefined &&
+            this.speechResult !== undefined && this.recordExist
         );
     }
 
@@ -41,16 +41,16 @@ export class SpeachComponent {
         this.recordExist = true;
     }
 
-    addSpeach() {
-        if (this.isValidSpeach()) {
-            const newSpeach: Speach = {
+    addSpeech() {
+        if (this.isValidSpeech()) {
+            const newSpeech: Speech = {
                 username: this.username,
-                selectedSpeachType: this.selectedSpeachType,
-                speachResult: this.speachResult,
+                selectedSpeechType: this.selectedSpeechType,
+                speechResult: this.speechResult,
                 date: new Date().toLocaleString("en-US", this.timeOptions),
                 record: true,
             };
-            this.speaches.push(newSpeach);
+            this.speeches.push(newSpeech);
         }
     }
 

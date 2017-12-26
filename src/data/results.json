@@ -3,7 +3,7 @@
     "id": "1",
     "name": "zubowitch",
     "speaker": "top",
-    "speaches": [
+    "speeches": [
       {
         "id": "1",
         "name": "illidan",
@@ -35,7 +35,7 @@
     "id": "2",
     "name": "daniluk",
     "speaker": "topless",
-    "speaches": [
+    "speeches": [
       {
         "id": "1",
         "name": "illidan",
@@ -67,7 +67,7 @@
     "id": "1",
     "name": "van gog",
     "speaker": "medium-top",
-    "speaches": [
+    "speeches": [
       {
         "id": "1",
         "name": "illidan",
@@ -99,7 +99,7 @@
     "id": "1",
     "name": "vaterloo",
     "speaker": "looser",
-    "speaches": [
+    "speeches": [
       {
         "id": "1",
         "name": "illidan",

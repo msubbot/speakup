@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
 
-type Speach = {
+type Speech = {
     username: string;
-    selectedSpeachType: string;
-    speachResult: string;
+    selectedSpeechType: string;
+    speechResult: string;
     date: string;
 };
 
@@ -14,8 +14,8 @@ type Speach = {
 })
 export class AppComponent {
     title = "app";
-    speachTypes = ["public", "camarades", "official", "relax"];
-    speachResults = ["good", "not good", "bad", "not bad", "awesome"];
+    speechTypes = ["public", "camarades", "official", "relax"];
+    speechResults = ["good", "not good", "bad", "not bad", "awesome"];
     options = {
         era: "long",
         year: "numeric",
@@ -27,20 +27,20 @@ export class AppComponent {
         minute: "numeric",
         second: "numeric"
     };
-    selectedSpeachType: string;
+    selectedSpeechType: string;
     username: string;
-    speachResult: string;
-    speaches: Speach[] = [
+    speechResult: string;
+    speeches: Speech[] = [
         {
             username: "Harrison Ford",
-            selectedSpeachType: this.speachTypes[0],
-            speachResult: this.speachResults[0],
+            selectedSpeechType: this.speechTypes[0],
+            speechResult: this.speechResults[0],
             date: new Date().toLocaleString("en-US", this.options)
         },
         {
             username: "P.Poroshenko",
-            selectedSpeachType: "hohol",
-            speachResult: "slava for the ukraine",
+            selectedSpeechType: "hohol",
+            speechResult: "slava for the ukraine",
             date: new Date().toLocaleString("en-US", this.options)
         },
     ];
