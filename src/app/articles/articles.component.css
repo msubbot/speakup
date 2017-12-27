@@ -1,8 +1,33 @@
 .articles_header {
-    text-align: center
+    text-align: center;
 }
 .wrapper {
     width: 90%;
     margin: 0 auto;
-    height: 100%;
+    min-height: 800px;
+}
+
+.creation {
+    float: right;
+}
+
+.article_face {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.example-full-width {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.search_button {
+    margin-left: 45%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    display: block;
 }

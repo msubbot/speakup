@@ -2,16 +2,28 @@
     <div class="articles_header">
         <h1>Articles</h1>
     </div>
+    <div class="search">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Search the speech, that you interested for!" [(ngModel)]="searchField">
+        </mat-form-field>
+        <div class="search_button">
+            <button mat-raised-button (click)="searchArticles()">Search</button>
+        </div>
+    </div>
     <mat-accordion>
-        <mat-expansion-panel *ngFor="let article of articles">
+        <mat-expansion-panel *ngFor="let article of articlesShowed">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    {{article.title}}
+                    <img src="../../assets/pics/default_article_face.jpg" class="article_face"> {{article.title}}
                 </mat-panel-title>
                 <mat-panel-description>
+                    <div class="creation">
+                        {{article.description}}
+                    </div>
                 </mat-panel-description>
             </mat-expansion-panel-header>
             <p>{{article.text}}</p>
+            <p>Created by {{article.author}} at {{article.creationDate}}</p>
         </mat-expansion-panel>
     </mat-accordion>
 </div>

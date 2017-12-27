@@ -5,7 +5,6 @@ import { HttpModule } from "@angular/http";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
-import { ArticlesModule } from "./articles/articles.module";
 import { ArticlesComponent } from "./articles/articles.component";
 import { SpeechComponent } from "./speech/speech.component";
 import { SpeechResultsComponent } from "./speech-results/speech-results.component";

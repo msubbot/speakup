@@ -17,7 +17,9 @@ type Article = {
     styleUrls: ["./articles.component.css"]
 })
 export class ArticlesComponent {
-    articles: Article[];
+    articlesData: Article[];
+    articlesShowed: Article[];
+    searchField: string;
 
     constructor(private httpClient: HttpClient) {
         this.httpClient
@@ -30,13 +32,25 @@ export class ArticlesComponent {
                         description: article.Description,
                         creationDate: article.CreationDate,
                         author: article.Author,
-                        text: article.Text,
+                        text: article.Text
                     };
                 });
             })
             .then(response => {
-                this.articles = response as Article[];
+                this.articlesData = response as Article[];
+                this.articlesShowed = this.articlesData;
             })
             .catch(console.log);
+    }
+
+    searchArticles(event?) {
+        if (this.searchField === "" || this.searchField === undefined) {
+            this.articlesShowed = this.articlesData;
+            return;
+        }
+        this.articlesShowed = this.articlesData;
+        this.articlesShowed = this.articlesShowed.filter(article => {
+            return article.title.toLocaleLowerCase().indexOf(this.searchField.toLocaleLowerCase()) !== -1;
+        });
     }
 }
