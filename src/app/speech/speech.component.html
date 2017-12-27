@@ -1,29 +1,40 @@
-<mat-card>
-    <div>
-        <mat-form-field>
-            <input matInput [(ngModel)]="username" placeholder="Type your name here" required>
-        </mat-form-field>
+<div class="wrapper">
+    <div class="speech_header">
+        <h1>Record your speech here!</h1>
     </div>
-    <div>
-        <mat-radio-group class="example-radio-group" [(ngModel)]="selectedSpeechType">
-            <mat-radio-button class="example-radio-button" *ngFor="let speech of speechTypes" [value]="speech">
-                {{speech}}
-            </mat-radio-button>
-            <div class="example-selected-value">You select {{selectedSpeechType}} speech type.</div>
-        </mat-radio-group>
-    </div>
-    <div>
-        <mat-radio-group class="example-radio-group" [(ngModel)]="speechResult">
-            <mat-radio-button class="example-radio-button" *ngFor="let result of speechResults" [value]="result">
-                {{result}}
-            </mat-radio-button>
-            <div class="example-selected-value">You select {{speechResult}} result of your spaech.</div>
-        </mat-radio-group>
-    </div>
-    <button mat-raised-button *ngIf="!isRecording" (click)="recordSpeech()">record speech</button>
-    <div *ngIf="isRecording">
-        <img src="../../assets/Spinner.svg">
-        <button mat-raised-button (click)="endRecording()">end recording</button>
-    </div>
-    <button mat-raised-button matStepperNext *ngIf="isValidSpeech()" (click)="addSpeech()">submit speech</button>
-</mat-card>
+    <mat-card>
+        <h2>Select speech type: </h2>
+        <div class="speech_type_selection">
+            <mat-radio-group class="example-radio-group" [(ngModel)]="selectedSpeechType">
+                <mat-radio-button class="example-radio-button" *ngFor="let speech of speechTypes" [value]="speech">
+                    {{speech}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <h2>Select speech place: </h2>
+        <div class="speech_place_selection">
+            <mat-radio-group class="example-radio-group" [(ngModel)]="selectedSpeechPlace">
+                <mat-radio-button class="example-radio-button" *ngFor="let place of speechPlaces" [value]="place">
+                    {{place}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <h2>Select speech audience: </h2>
+        <div class="speech_place_audience">
+            <mat-radio-group class="example-radio-group" [(ngModel)]="selectedSpeechAudience">
+                <mat-radio-button class="example-radio-button" *ngFor="let audience of speechAudiences" [value]="audience">
+                    {{audience}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="record_player">
+            <button mat-raised-button *ngIf="!isRecording && !recordExist" (click)="recordSpeech()" color="primary">Record speech</button>
+            <div *ngIf="isRecording">
+                <img src="../../assets/Spinner.svg" class="spinner">
+                <div class="recording_word">Recording...</div>
+                <p><button mat-raised-button (click)="endRecording()" color="warn">End recording</button></p>
+            </div>
+        </div>
+        <button mat-raised-button matStepperNext color="primary" *ngIf="isValidSpeech()" (click)="addSpeech()" class="submit_speech">Submit speech</button>
+    </mat-card>
+</div>

@@ -4,7 +4,7 @@
 .wrapper {
     width: 90%;
     margin: 0 auto;
-    min-height: 800px;
+    min-height: 700px;
 }
 
 .creation {
@@ -28,6 +28,6 @@
 .search_button {
     margin-left: 45%;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     display: block;
 }

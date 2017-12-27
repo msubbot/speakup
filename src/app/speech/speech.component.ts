@@ -1,12 +1,5 @@
 import { Component, Input } from "@angular/core";
-
-type Speech = {
-    username: string;
-    selectedSpeechType: string;
-    speechResult: string;
-    date: string;
-    record: boolean;
-};
+import { Speech } from "../dto/Speech";
 
 @Component({
     selector: "sr-speech",
@@ -14,21 +7,25 @@ type Speech = {
     styleUrls: ["./speech.component.css"]
 })
 export class SpeechComponent {
-    @Input() username: string;
-    @Input() selectedSpeechType: string;
-    @Input() speechResult: string;
-    @Input() speechResults: string[];
-    @Input() speechTypes: string[];
+    speechTypes = ["good", "not good", "bad", "not bad", "awesome"];
+    speechAudiences = ["Politics", "Sudents", "Friends", "Camunisti"];
+    speechPlaces = ["Home", "Office", "Church", "School"];
+    @Input() username: string = "admin";
     @Input() speeches: Speech[];
+
+    selectedSpeechType: string;
+    selectedSpeechPlace: string;
+    selectedSpeechAudience: string;
 
     isRecording: boolean = false;
     recordExist: boolean = false;
 
     isValidSpeech() {
         return (
-            this.username !== undefined &&
+            this.selectedSpeechPlace !== undefined &&
+            this.selectedSpeechAudience !== undefined &&
             this.selectedSpeechType !== undefined &&
-            this.speechResult !== undefined && this.recordExist
+            this.recordExist
         );
     }
 
@@ -46,9 +43,10 @@ export class SpeechComponent {
             const newSpeech: Speech = {
                 username: this.username,
                 selectedSpeechType: this.selectedSpeechType,
-                speechResult: this.speechResult,
+                speechPlace: this.selectedSpeechPlace,
+                speechAudience: this.selectedSpeechAudience,
                 date: new Date().toLocaleString("en-US", this.timeOptions),
-                record: true,
+                record: true
             };
             this.speeches.push(newSpeech);
         }
