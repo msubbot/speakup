@@ -20,4 +20,5 @@ export class AnalysisComponent {
             .catch(console.log);
     }
 
+    addSpeechInHistory() {};
 }

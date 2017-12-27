@@ -1,11 +1,6 @@
 import { Component, Input } from "@angular/core";
-
-type Speech = {
-    username: string;
-    selectedSpeechType: string;
-    speechResult: string;
-    date: string;
-};
+import { HttpClient } from "@angular/common/http";
+import { SWAGGER_API_HOST } from "../config";
 
 @Component({
     selector: "sr-history",
@@ -14,4 +9,15 @@ type Speech = {
 })
 export class HistoryComponent {
     @Input() speeches: any;
+    speechesHistory;
+
+    constructor(private httpClient: HttpClient) {
+        this.httpClient
+            .get(SWAGGER_API_HOST + "/history")
+            .toPromise()
+            .then(response => {
+                this.speechesHistory = response;
+            })
+            .catch(console.log);
+    }
 }
