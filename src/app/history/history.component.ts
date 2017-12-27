@@ -8,10 +8,10 @@ type Speech = {
 };
 
 @Component({
-    selector: "sr-speech-results",
-    templateUrl: "./speech-results.component.html",
-    styleUrls: ["./speech-results.component.css"]
+    selector: "sr-history",
+    templateUrl: "./history.component.html",
+    styleUrls: ["./history.component.css"]
 })
-export class SpeechResultsComponent {
+export class HistoryComponent {
     @Input() speeches: any;
 }

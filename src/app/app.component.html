@@ -11,11 +11,14 @@
                 <sr-articles></sr-articles>
             </mat-step>
             <mat-step [stepControl]="secondFormGroup" label="Train your speech">
-                <sr-speech [username]="username" [(speeches)]= "speeches">
+                <sr-speech [username]="username" [(speeches)]="speeches">
                 </sr-speech>
             </mat-step>
-            <mat-step label="Check the results">
-                <sr-speech-results [(speeches)]="speeches"></sr-speech-results>
+            <mat-step [stepControl]="secondFormGroup" label="Analyse your speech">
+                <sr-analysis></sr-analysis>
+            </mat-step>
+            <mat-step label="View your history">
+                <sr-history [(speeches)]="speeches"></sr-history>
             </mat-step>
         </mat-horizontal-stepper>
         <mat-toolbar class="footer" color="primary">

@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
 import { ArticlesComponent } from "./articles/articles.component";
 import { SpeechComponent } from "./speech/speech.component";
-import { SpeechResultsComponent } from "./speech-results/speech-results.component";
+import { AnalysisComponent } from "./analysis/analysis.component";
+import { HistoryComponent } from "./history/history.component";
 
 import "hammerjs";
 
@@ -18,7 +19,8 @@ import { AppComponent } from "./app.component";
         AppComponent,
         ArticlesComponent,
         SpeechComponent,
-        SpeechResultsComponent,
+        AnalysisComponent,
+        HistoryComponent
     ],
     imports: [
         BrowserModule,

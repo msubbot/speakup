@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { Speech } from "./dto/Speech";
 
-
 @Component({
     selector: "app",
     templateUrl: "./app.component.html",
